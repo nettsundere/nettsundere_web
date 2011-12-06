@@ -5,7 +5,7 @@ set :rvm_bin_path, "/usr/local/bin"
 
 set :application, "nettsundere_web"
 
-set :repository, ""
+set :repository, "git@github.com:nettsundere/nettsundere_web.git"
 set :scm, :git
 
 default_run_options[:pty] = true
