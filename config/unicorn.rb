@@ -1,5 +1,5 @@
 worker_processes 4
-
+preload_app true
 working_directory File.expand_path("../../", __FILE__)
 
 if ENV['RACK_ENV'] == "production"
