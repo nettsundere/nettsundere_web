@@ -45,4 +45,13 @@ class NettsundereWeb < Sinatra::Application
     @page = :contacts
     haml :index
   end
+  
+  get "/home_search" do
+    @description = "Сниму однокомнатную квартиру в Череповце"
+    @keywords ="Сниму однокомнатную квартиру в Череповце"
+    @title = "сниму однокомнатную квартиру в Череповце"
+    
+    @page = :home_search
+    haml :index
+  end
 end
