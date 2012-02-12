@@ -61,7 +61,6 @@
           =a_if_not(:works, "Работы", :href => "/работы")
           =a_if_not(:cv, "Резюме", :href => "/резюме")
           =a_if_not(:contacts, "Контакты", :href => "/контакты")
-          =a_if_not(:home_search, "Сниму квартиру в Череповце", :href => "home_search")
       .content
         = render(:haml, "partials/_#{@page}".intern)
       .push
