@@ -8,6 +8,7 @@ set :application, "nettsundere_web"
 set :repository, "git@github.com:nettsundere/nettsundere_web.git"
 set :scm, :git
 
+set :ssh_options, :forward_agent => true
 default_run_options[:pty] = true
 set :branch, "master"
 set :scm_username, "nettsundere"
