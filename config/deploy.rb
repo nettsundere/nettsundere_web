@@ -1,5 +1,5 @@
-$:.unshift(File.expand_path('./lib', ENV['rvm_path'])) 
-require "rvm/capistrano"                  
+require "rvm/capistrano"
+set :rvm_type, :system                  
 set :rvm_ruby_string, "ruby-1.9.3-head"
 set :rvm_bin_path, "/usr/local/bin"        
 
