@@ -1,4 +1,4 @@
-worker_processes 4
+worker_processes 2
 preload_app true
 working_directory File.expand_path("../../", __FILE__)
 
