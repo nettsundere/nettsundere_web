@@ -43,6 +43,10 @@ $footer_height: 12em;
   height: $footer_height;
 }
 
+footer {
+  background: #ccc;
+}
+
 footer .row {
   width: 100%;
   float: left;
@@ -63,7 +67,6 @@ footer .column_links .column a {
 footer ul {
   margin: 0px;
   padding-left: 1.3em;
-  list-style-type: circle;
 }
 
 footer .work, footer .social {

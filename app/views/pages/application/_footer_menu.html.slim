@@ -6,9 +6,12 @@
       .label
         = t('.work')
       ul
-        li = link_to(t('.github'), PATHS[:github])
-        li = link_to(t('.moikrug'), PATHS[:moikrug])
-        li = link_to(t('.linkedin'), PATHS[:linkedin])
+        li
+          = link_to(t('.github'), PATHS[:github])
+        li
+          = link_to(t('.moikrug'), PATHS[:moikrug])
+        li
+          = link_to(t('.linkedin'), PATHS[:linkedin])
     .social
       .label
         = t('.social')
