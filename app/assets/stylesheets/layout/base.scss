@@ -1,0 +1,77 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  background: #eee;
+
+  font: 0.9em/1.5em 'Open Sans', sans-serif;
+  color: #111;
+}
+
+header {
+  padding: 1em 4em;
+}
+
+.content {
+  padding: 4em;
+}
+
+a {
+  color: #445599;
+}
+
+a:hover {
+  color: #334499;
+}
+
+a:visited {
+  color: #994455;
+}
+
+$footer_height: 12em;
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0px auto (-$footer_height);
+}
+
+.push, footer {
+  height: $footer_height;
+}
+
+footer .row {
+  width: 100%;
+  float: left;
+}
+
+footer .row .other_links {
+  padding: 1em 4em;
+}
+
+footer .column_links {
+  padding: 0em 4em; 
+}
+
+footer .column_links .column a {
+  font-size: 0.9em; 
+}
+
+footer ul {
+  margin: 0px;
+  padding-left: 1.3em;
+  list-style-type: circle;
+}
+
+footer .work, footer .social {
+  width: 14em;
+  float: left;
+}
+
+footer .label {
+  color: #555;
+  font-weight: bold;
+}

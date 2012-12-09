@@ -1,5 +1,13 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  pages:
+    application:
+      menu:
+        root: "Summary"
+      footer_menu:
+        links: "Other resources:"
+        work: "Work"
+        social_networks: "Social"
+        github: "Github activity"
+        facebook: "Facebook profile"
+        moikrug: "Moikrug.ru profile"
+        linkedin: "Linkedin profile"
