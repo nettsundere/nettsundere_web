@@ -47,3 +47,5 @@ gem 'unicorn'
 # gem 'debugger'
 
 gem 'turbolinks'
+
+gem 'strong_parameters'
