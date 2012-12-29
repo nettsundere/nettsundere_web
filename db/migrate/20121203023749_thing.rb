@@ -1,6 +1,6 @@
-class Work < ActiveRecord::Migration
+class Thing < ActiveRecord::Migration
   def change
-    create_table :works do |t|
+    create_table :things do |t|
       t.string :name_ru
       t.string :name_en
 
