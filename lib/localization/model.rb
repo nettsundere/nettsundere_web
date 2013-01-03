@@ -1,30 +1,37 @@
 module Localization
   module Model
-
     class << self
       def included(base)
-        base.class_eval do 
+        base.send(:include, InstanceMethods)
+        base.send(:extend, ClassMethods)
+
+        base.class_eval do
           scope :version, lambda { |locale| where(locale => true) }
+          scope :localized, lambda { version(I18n.locale) }
         end
       end
     end
 
-    def method_missing(method, *args, &block)
-      possible_method = localized_name_for(method)
-      if(respond_to?(possible_method))
-        send(possible_method)
-      else
-        super
+    module InstanceMethods
+      def method_missing(method, *args, &block)
+        possible_method = self.class.localized_name(method)
+        if(respond_to?(possible_method))
+          params = block ? [*args, block] : args
+          send(possible_method, *params)
+        else
+          super
+        end
+      end
+
+      def respond_to?(method, include_private = false)
+        super || super(self.class.localized_name(method), include_private)
       end
     end
 
-    def respond_to?(method, include_private = false)
-      super(method, include_private) || super(localized_name_for(method), include_private)
-    end
-
-    private
-      def localized_name_for(method)
-        [method, I18n.locale].join('_')
+    module ClassMethods
+      def localized_name(method)
+        [method, I18n.locale].join('_').intern
       end
+    end
   end
 end

@@ -9,7 +9,9 @@ module Localization
     end
     
     def set_locale
-      if locale_to_set = params[:locale]
+      if (locale_to_set = params[:locale]) \
+        && I18n.available_locales.include?(locale_to_set.intern)
+
         I18n.locale = locale_to_set
       else
         I18n.locale = I18n.default_locale
