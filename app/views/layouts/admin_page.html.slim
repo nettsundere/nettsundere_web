@@ -13,15 +13,13 @@ html
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic-ext,latin,cyrillic"
 
 
-    = stylesheet_link_tag    "application", :media => "all"
-    = javascript_include_tag "application"
+    = stylesheet_link_tag    "admin_page", :media => "all"
+    = javascript_include_tag "admin_page"
     = csrf_meta_tags
   body
-    .wrapper
-      header
-        = render "menu"
-      .content
+    = render "menu"
+    .container-fluid
+      .row-fluid
+        = render "messages"
+      .row-fluid
         = yield
-      .push
-    footer
-      = render "footer_menu"

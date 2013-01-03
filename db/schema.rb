@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(:version => 20121203023749) do
     t.text     "text_en"
     t.text     "summary_ru"
     t.text     "summary_en"
+    t.boolean  "en"
+    t.boolean  "ru"
     t.date     "date"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

@@ -1,5 +1,5 @@
 module Pages
-  class WelcomeController < ApplicationController
+  class WelcomeController < PageController
     def show
       
     end

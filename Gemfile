@@ -14,14 +14,14 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
 
-
 group :test do
   gem 'simplecov', :require => false
+  gem "factory_girl_rails"
 end
 
 group :test, :development do
@@ -47,5 +47,8 @@ gem 'unicorn'
 # gem 'debugger'
 
 gem 'turbolinks'
-
 gem 'strong_parameters'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
+gem 'simple_form'
+gem 'russian'

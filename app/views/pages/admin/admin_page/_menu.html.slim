@@ -1,0 +1,12 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      = link_to(t('.nettsundere'), root_path, :class => "brand")
+      ul.nav
+        li.dropdown
+          a.dropdown-toggle data-toggle="dropdown" href="#"
+            = t('.things')
+            b.caret
+          ul.dropdown-menu
+            li = link_to(t('.index'), admin_things_path)
+            li = link_to(t('.new'), new_admin_thing_path)

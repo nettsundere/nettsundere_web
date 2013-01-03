@@ -1,6 +1,27 @@
 en:
   pages:
-    application:
+    admin:
+      admin_page:
+        menu:
+          nettsundere: "NRE"
+
+          index: "Index"
+          new: "New"
+
+          things: "Things"
+      things:
+        form:
+          main: "Main"
+          russian: "Russian"
+          english: "English"
+        index:
+          edit: "Edit"
+          delete: "Delete"
+          are_you_sure: "Are you sure?"
+        created: "Thing reated"
+        updated: "Thing updated"
+        deleted: "Thing deleted"
+    page:
       menu:
         root: "Summary"
       footer_menu:
@@ -11,3 +32,17 @@ en:
         facebook: "Facebook profile"
         moikrug: "Moikrug.ru profile"
         linkedin: "Linkedin profile"
+  activerecord:
+    models:
+      thing: "a thing"
+    attributes:
+      thing:
+        date: "Date"
+        ru: "Russian version?"
+        en: "English version?"
+        name_ru: "Russian name"
+        name_en: "English name"
+        summary_ru: "Russian summary"
+        summary_en: "English summary"
+        text_ru: "Russian text"
+        text_en: "English text"

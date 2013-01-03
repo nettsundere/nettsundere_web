@@ -1,0 +1,24 @@
+= simple_form_for(thing, :url => action, :html => {:class => 'form-horizontal' }) do |f|
+  = render "form_errors", :errors => thing.errors
+  .taggable
+    ul.nav.nav-tabs
+      li.active
+        a href="#main" data-toggle="tab" = t('.main')
+      li
+        a href="#ru" data-toggle="tab" = t('.russian')
+      li
+        a href="#en" data-toggle="tab" = t('.english')
+    .tab-content
+      .tab-pane#main.active
+        = f.input :date
+      .tab-pane#ru
+        = f.input :ru
+        = f.input :name_ru
+        = f.input :summary_ru
+        = f.input :text_ru
+      .tab-pane#en
+        = f.input :en
+        = f.input :name_en
+        = f.input :summary_en
+        = f.input :text_en
+    = f.button :submit, :class => "btn btn-primary"

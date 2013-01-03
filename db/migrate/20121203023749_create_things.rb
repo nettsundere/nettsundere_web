@@ -1,4 +1,4 @@
-class Thing < ActiveRecord::Migration
+class CreateThings < ActiveRecord::Migration
   def change
     create_table :things do |t|
       t.string :name_ru
@@ -9,6 +9,9 @@ class Thing < ActiveRecord::Migration
 
       t.text :summary_ru
       t.text :summary_en
+
+      t.boolean :en
+      t.boolean :ru
 
       t.date :date
 
