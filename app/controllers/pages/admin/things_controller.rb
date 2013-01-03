@@ -43,6 +43,7 @@ module Pages
       private
         def permitted
           safe_attributes = [
+            :state_event,
             :ru,
             :en,
             :name_ru,

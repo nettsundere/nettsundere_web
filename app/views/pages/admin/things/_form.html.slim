@@ -10,6 +10,7 @@
         a href="#en" data-toggle="tab" = t('.english')
     .tab-content
       .tab-pane#main.active
+        = f.input :state_event, :as => :state_event_select
         = f.input :date
       .tab-pane#ru
         = f.input :ru

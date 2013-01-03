@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Pages::ThingsController do
   before do
-    @thing = create :thing
+    @thing = create :published_thing
   end
 
   it "should show get :show" do
