@@ -20,7 +20,7 @@ module Localization
       if I18n.locale != I18n.default_locale
         super.reverse_merge(:locale => I18n.locale)
       else
-        super
+        super.reverse_merge(:locale => nil)
       end
     end
   end
