@@ -15,10 +15,10 @@
         = f.input :ru
         = f.input :alias_ru
         = f.input :title_ru
-        = f.input :text_ru
+        = f.input :text_ru, :as => :ckeditor, :input_html => { :height => 400 }
       .tab-pane#en
         = f.input :en
         = f.input :alias_en
         = f.input :title_en
-        = f.input :text_en
+        = f.input :text_en, :as => :ckeditor, :input_html => { :height => 400 }
     = f.button :submit, :class => "btn btn-primary"

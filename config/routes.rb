@@ -1,4 +1,6 @@
 NettsundereWeb::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+
   extend Localization::Routes
   scope :module => :pages do
     scope "(:locale)", :locale => explicit_locale_regexp do

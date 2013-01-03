@@ -15,11 +15,11 @@
       .tab-pane#ru
         = f.input :ru
         = f.input :name_ru
-        = f.input :summary_ru
-        = f.input :text_ru
+        = f.input :summary_ru, :as => :ckeditor, :input_html => { :height => 400 }
+        = f.input :text_ru, :as => :ckeditor, :input_html => { :height => 400 }
       .tab-pane#en
         = f.input :en
         = f.input :name_en
-        = f.input :summary_en
-        = f.input :text_en
+        = f.input :summary_en, :as => :ckeditor, :input_html => { :height => 400 }
+        = f.input :text_en, :as => :ckeditor, :input_html => { :height => 400 }
     = f.button :submit, :class => "btn btn-primary"

@@ -30,6 +30,12 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     builder (3.0.4)
+    carrierwave (0.7.1)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+    ckeditor (3.7.3)
+      mime-types
+      orm_adapter
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -65,7 +71,10 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.19)
+    mini_magick (3.4)
+      subexec (~> 0.2.1)
     multi_json (1.5.0)
+    orm_adapter (0.4.0)
     pg (0.14.1)
     polyglot (0.3.3)
     rack (1.4.1)
@@ -133,6 +142,7 @@ GEM
       actionpack (~> 3.0)
       activemodel (~> 3.0)
       railties (~> 3.0)
+    subexec (0.2.2)
     temple (0.5.5)
     therubyracer (0.11.0)
       ref
@@ -160,10 +170,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  carrierwave
+  ckeditor
   coffee-rails (~> 3.2.1)
   factory_girl_rails
   jquery-rails
   less-rails
+  mini_magick
   pg
   rails (= 3.2.9)
   rspec-rails (~> 2.0)
