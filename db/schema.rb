@@ -11,7 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130103001442) do
+ActiveRecord::Schema.define(:version => 20130103024928) do
+
+  create_table "contents", :force => true do |t|
+    t.string   "alias_ru"
+    t.string   "alias_en"
+    t.string   "state"
+    t.string   "title_ru"
+    t.string   "title_en"
+    t.text     "text_ru"
+    t.text     "text_en"
+    t.boolean  "en"
+    t.boolean  "ru"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "contents", ["alias_en"], :name => "index_contents_on_alias_en", :unique => true
+  add_index "contents", ["alias_ru"], :name => "index_contents_on_alias_ru", :unique => true
 
   create_table "things", :force => true do |t|
     t.string   "name_ru"

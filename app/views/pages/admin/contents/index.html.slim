@@ -1,0 +1,17 @@
+table.table.table-striped
+  thead
+    tr
+      th #
+      th = Content.human_attribute_name(:title_ru)
+      th = Content.human_attribute_name(:title_en)
+      th
+      th
+  - @contents.each do |content|
+    tr
+      td = content.id
+      td = content.title_ru
+      td = content.title_en
+      td = link_to(t('.edit'), edit_admin_content_path(content))
+      td = link_to(t('.delete'), admin_content_path(content),
+        :confirm => t('.are_you_sure'),
+        :method => :delete)

@@ -9,6 +9,7 @@ en:
           new: "New"
 
           things: "Things"
+          contents: "Content pages"
       things:
         form:
           main: "Main"
@@ -21,6 +22,18 @@ en:
         created: "Thing reated"
         updated: "Thing updated"
         deleted: "Thing deleted"
+      contents:
+        form:
+          main: "Main"
+          russian: "Russian"
+          english: "English"
+        index:
+          edit: "Edit"
+          delete: "Delete"
+          are_you_sure: "Are you sure?"
+        created: "Content reated"
+        updated: "Content updated"
+        deleted: "Content deleted"
     page:
       menu:
         root: "Summary"
@@ -35,6 +48,7 @@ en:
   activerecord:
     models:
       thing: "a thing"
+      content: "a content"
     attributes:
       thing:
         date: "Date"
@@ -44,5 +58,14 @@ en:
         name_en: "English name"
         summary_ru: "Russian summary"
         summary_en: "English summary"
+        text_ru: "Russian text"
+        text_en: "English text"
+      content:
+        ru: "Russian version?"
+        en: "English version?"
+        alias_ru: "Russian url alias"
+        alias_en: "English url alias"
+        title_ru: "Russian title"
+        title_en: "English title"
         text_ru: "Russian text"
         text_en: "English text"
