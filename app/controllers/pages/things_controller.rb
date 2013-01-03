@@ -10,7 +10,7 @@ module Pages
 
     private
       def available_things
-        Thing.published
+        Thing.published.localized
       end
   end
 end
