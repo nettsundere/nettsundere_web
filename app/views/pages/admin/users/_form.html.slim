@@ -1,0 +1,6 @@
+= simple_form_for(user, :url => action, :html => {:class => 'form-horizontal' }) do |f|
+  = render "form_errors", :errors => user.errors
+  = f.input :state_event, :as => :state_event_select
+  = f.input :login
+  = f.input :password, :as => :password, :confirmation => true 
+  = f.button :submit, :class => "btn btn-primary"

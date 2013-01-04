@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Pages::Admin::ThingsController do
   before do
+    sign_in!
     @thing = create :thing
   end
 

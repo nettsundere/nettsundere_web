@@ -1,6 +1,7 @@
 en:
   pages:
     admin:
+      access_denied: "Access denied"
       admin_page:
         menu:
           nettsundere: "NRE"
@@ -10,6 +11,9 @@ en:
 
           things: "Things"
           contents: "Content pages"
+          users: "Users"
+
+          sigin_out: "Sign out"
       things:
         form:
           main: "Main"
@@ -34,6 +38,14 @@ en:
         created: "Content reated"
         updated: "Content updated"
         deleted: "Content deleted"
+      users:
+        index:
+          edit: "Edit"
+          delete: "Delete"
+          are_you_sure: "Are you sure?"
+        created: "User created"
+        updated: "User updated"
+        deleted: "User deleted" 
     page:
       menu:
         root: "Summary"
@@ -45,10 +57,17 @@ en:
         facebook: "Facebook profile"
         moikrug: "Moikrug.ru profile"
         linkedin: "Linkedin profile"
+    sessions:
+      form:
+        sign_in: "Sign in"
+      new:
+        authorization: "Authorization"
+      login_failed: "Login failed"
   activerecord:
     models:
       thing: "a thing"
       content: "a content"
+      user: "a user"
     attributes:
       thing:
         date: "Date"
@@ -69,3 +88,8 @@ en:
         title_en: "English title"
         text_ru: "Russian text"
         text_en: "English text"
+      user:
+        login: "Login"
+        password: "Password"
+        password_digest: "Password"
+        password_confirmation: "Password confirmation"

@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Pages::Admin::ContentsController do
   before do
+    sign_in!
     @content = create :content
   end
 

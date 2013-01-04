@@ -8,11 +8,16 @@ NettsundereWeb::Application.routes.draw do
 
       resources :things, :only => [:index, :show]
       
+      resource :session, :only => [:new, :create, :destroy]
+
       namespace :admin do
         root :to => "dashboard#show"
 
-        resources :contents, :except => [:show]
-        resources :things, :except => [:show]
+        with_options :except => [:show] do |map|
+          map.resources :contents
+          map.resources :things
+          map.resources :users
+        end
       end
 
       match ':id' => "contents#show"

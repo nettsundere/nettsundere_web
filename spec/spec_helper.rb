@@ -42,3 +42,10 @@ RSpec.configure do |config|
 
   config.include FactoryGirl::Syntax::Methods
 end
+
+
+include Authorization::Controller
+def sign_in!
+  some_user = create :enabled_user
+  sign_in(some_user)
+end
