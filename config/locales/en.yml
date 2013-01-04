@@ -100,6 +100,8 @@ en:
         summary_en: "English summary"
         text_ru: "Russian text"
         text_en: "English text"
+        state: "State"
+        state_event: "State"
       content:
         ru: "Russian version?"
         en: "English version?"
@@ -109,11 +111,15 @@ en:
         title_en: "English title"
         text_ru: "Russian text"
         text_en: "English text"
+        state: "State"
+        state_event: "State"
       user:
         login: "Login"
         password: "Password"
         password_digest: "Password"
         password_confirmation: "Password confirmation"
+        state: "State"
+        state_event: "State"
       repository:
         ru: "Russian version?"
         en: "English version?"
