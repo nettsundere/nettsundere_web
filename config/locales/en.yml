@@ -73,6 +73,17 @@ en:
         authorization: "Authorization"
       login_failed: "Login failed"
   activerecord:
+    state_machines:
+      states:
+        published: "Published"
+        hidden: "Hidden"
+        enabled: "Enabled"
+        disabled: "Disabled"
+      events:
+        publish: "Publish"
+        hide: "Hide"
+        enable: "Enable"
+        disable: "Disable"
     models:
       thing: "a thing"
       content: "a content"
