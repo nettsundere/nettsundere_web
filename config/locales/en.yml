@@ -12,6 +12,7 @@ en:
           things: "Things"
           contents: "Content pages"
           users: "Users"
+          repositories: "Repositories"
 
           sigin_out: "Sign out"
       things:
@@ -45,7 +46,15 @@ en:
           are_you_sure: "Are you sure?"
         created: "User created"
         updated: "User updated"
-        deleted: "User deleted" 
+        deleted: "User deleted"
+      repositories:
+        index:
+          edit: "Edit"
+          delete: "Delete"
+          are_you_sure: "Are you sure?"
+        created: "Repository created"
+        updated: "Repository updated"
+        deleted: "Repository deleted" 
     page:
       menu:
         root: "Summary"
@@ -68,6 +77,7 @@ en:
       thing: "a thing"
       content: "a content"
       user: "a user"
+      repository: "a repository"
     attributes:
       thing:
         date: "Date"
@@ -93,3 +103,14 @@ en:
         password: "Password"
         password_digest: "Password"
         password_confirmation: "Password confirmation"
+      repository:
+        ru: "Russian version?"
+        en: "English version?"
+        name: "Name"
+        source: "Source"
+        description_ru: "Russian description"
+        description_en: "English description"
+        summary_ru: "Russian summary"
+        summary_en: "English summary"
+        state: "State"
+        state_event: "State"

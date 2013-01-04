@@ -17,6 +17,7 @@ NettsundereWeb::Application.routes.draw do
           map.resources :contents
           map.resources :things
           map.resources :users
+          map.resources :repositories
         end
       end
 

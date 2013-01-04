@@ -1,0 +1,24 @@
+= simple_form_for(repository, :url => action, :html => {:class => 'form-horizontal' }) do |f|
+  = render "form_errors", :errors => repository.errors
+  .taggable
+    ul.nav.nav-tabs
+      li.active
+        a href="#main" data-toggle="tab" = t('.main')
+      li
+        a href="#ru" data-toggle="tab" = t('.russian')
+      li
+        a href="#en" data-toggle="tab" = t('.english')
+    .tab-content
+      .tab-pane#main.active
+        = f.input :state_event, :as => :state_event_select
+        = f.input :name
+        = f.input :source
+      .tab-pane#ru
+        = f.input :ru
+        = f.input :summary_ru, :input_html => { :height => 400 }
+        = f.input :description_ru, :input_html => { :height => 400 }
+      .tab-pane#en
+        = f.input :en
+        = f.input :summary_en, :input_html => { :height => 400 }
+        = f.input :description_en, :input_html => { :height => 400 }
+    = f.button :submit, :class => "btn btn-primary"

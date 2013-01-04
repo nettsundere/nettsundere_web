@@ -17,6 +17,13 @@
           ul.dropdown-menu
             li = link_to(t('.index'), admin_contents_path)
             li = link_to(t('.new'), new_admin_content_path)
+        li.dropdown
+          a.dropdown-toggle data-toggle="dropdown" href="#"
+            = t('.repositories')
+            b.caret
+          ul.dropdown-menu
+            li = link_to(t('.index'), admin_repositories_path)
+            li = link_to(t('.new'), new_admin_repository_path)
         li.divider-vertical
         li.dropdown
           a.dropdown-toggle data-toggle="dropdown" href="#"
