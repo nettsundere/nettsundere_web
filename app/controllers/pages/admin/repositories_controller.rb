@@ -48,6 +48,7 @@ module Pages
             :en,
             :name,
             :source,
+            :author,
             :description_ru,
             :description_en,
             :summary_ru,

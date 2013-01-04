@@ -125,6 +125,7 @@ en:
         en: "English version?"
         name: "Name"
         source: "Source"
+        author: "Commits author"
         description_ru: "Russian description"
         description_en: "English description"
         summary_ru: "Russian summary"
