@@ -12,10 +12,6 @@ module Pages
         end
         true
       end
-
-      def ckeditor_before_create_asset(asset)
-        signed_in?
-      end
     end
   end
 end

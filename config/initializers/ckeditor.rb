@@ -16,3 +16,17 @@ if Object.const_defined?("Ckeditor")
     # config.attachment_file_types = ["doc", "docx", "xls", "odt", "ods", "pdf", "rar", "zip", "tar", "swf"]
   end
 end
+
+module CkeditorControllerPatch
+  include Authorization::Controller
+
+  def ckeditor_before_create_asset(asset)
+    head :bad_request unless signed_in?
+  end
+
+  def ckeditor_authenticate
+    head :bad_request unless signed_in?
+  end
+end
+
+Ckeditor::ApplicationController.send(:include, CkeditorControllerPatch)
