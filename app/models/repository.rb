@@ -33,4 +33,8 @@ class Repository < ActiveRecord::Base
       transition :published => :hidden
     end
   end
+
+  def committed_changes
+    commits.sum("additions + deletions").to_i
+  end
 end

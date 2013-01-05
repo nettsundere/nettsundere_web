@@ -133,3 +133,4 @@ en:
         summary_en: "English summary"
         state: "State"
         state_event: "State"
+        committed_changes: "Committed changes"
