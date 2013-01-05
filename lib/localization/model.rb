@@ -29,8 +29,8 @@ module Localization
     end
 
     module ClassMethods
-      def localized_name(method)
-        [method, I18n.locale].join('_').intern
+      def localized_name(method, locale = I18n.locale)
+        [method, locale].join('_').intern
       end
     end
   end

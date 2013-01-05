@@ -19,5 +19,6 @@ describe "ModelTranslation in ActiveRecord model instance" do
 
   it "can translate method name" do
     Thing.localized_name(:name).should == :name_en
+    Thing.localized_name(:name, :ru).should == :name_ru
   end
 end
