@@ -1,5 +1,7 @@
 module Localization
   module Controller
+    include LocaleLogic
+
     class << self
       def included(base)
         base.class_eval do
@@ -19,11 +21,7 @@ module Localization
     end
 
     def url_options
-      if I18n.locale != I18n.default_locale
-        super.reverse_merge(:locale => I18n.locale)
-      else
-        super.reverse_merge(:locale => nil)
-      end
+      super.reverse_merge(locale_hash_parameter(I18n.locale))
     end
   end
 end
