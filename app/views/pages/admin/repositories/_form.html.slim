@@ -11,8 +11,9 @@
     .tab-content
       .tab-pane#main.active
         = f.input :state_event, :as => :state_event_select
-        = f.input :name
         = f.input :source
+        = f.input :owner
+        = f.input :name
         = f.input :author
       .tab-pane#ru
         = f.input :ru

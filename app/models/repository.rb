@@ -8,8 +8,10 @@ class Repository < ActiveRecord::Base
     state :published do
       validates :name, :presence => true
       validates :source, :presence => true
+      validates :owner, :presence => true
       validates :author, :presence => true
-      
+
+
       with_options :if => :en do |v|
         v.validates :summary_en, :presence => true
         v.validates :description_en, :presence => true

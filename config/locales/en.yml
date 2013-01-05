@@ -123,8 +123,9 @@ en:
       repository:
         ru: "Russian version?"
         en: "English version?"
+        source: "GIT Source"
         name: "Name"
-        source: "Source"
+        owner: "Owner"
         author: "Commits author"
         description_ru: "Russian description"
         description_en: "English description"
