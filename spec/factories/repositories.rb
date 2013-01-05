@@ -1,6 +1,5 @@
 FactoryGirl.define do
   factory :repository do
-
     ru true
     en true
 
@@ -12,6 +11,13 @@ FactoryGirl.define do
 
     summary_ru { generate :random_text }
     summary_en { generate :random_text }
+
+    after(:create) do |n| 
+      [
+        create(:commit, :repository => n),
+        create(:commit, :repository => n) 
+      ] 
+    end
 
     factory :published_repository do
       state :published

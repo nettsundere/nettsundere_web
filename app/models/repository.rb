@@ -1,6 +1,8 @@
 class Repository < ActiveRecord::Base
   include Localization::Model
 
+  has_many :commits, :dependent => :destroy
+
   scope :published, lambda { where(:state => :published) }
   scope :github, lambda { where(:source => :github) }
 
