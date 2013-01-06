@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130105042343) do
+ActiveRecord::Schema.define(:version => 20130106072019) do
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -50,12 +50,14 @@ ActiveRecord::Schema.define(:version => 20130105042343) do
     t.text     "text_en"
     t.boolean  "en"
     t.boolean  "ru"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "symbolic_name"
   end
 
   add_index "contents", ["alias_en"], :name => "index_contents_on_alias_en", :unique => true
   add_index "contents", ["alias_ru"], :name => "index_contents_on_alias_ru", :unique => true
+  add_index "contents", ["symbolic_name"], :name => "index_contents_on_symbolic_name"
 
   create_table "repositories", :force => true do |t|
     t.string   "name"

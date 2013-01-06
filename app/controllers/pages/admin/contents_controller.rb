@@ -46,6 +46,7 @@ module Pages
             :state_event,
             :ru,
             :en,
+            :symbolic_name,
             :alias_ru,
             :alias_en,
             :title_ru,

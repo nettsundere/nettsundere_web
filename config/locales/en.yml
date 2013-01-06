@@ -105,6 +105,7 @@ en:
       content:
         ru: "Russian version?"
         en: "English version?"
+        symbolic_name: "Symbolic name"
         alias_ru: "Russian url alias"
         alias_en: "English url alias"
         title_ru: "Russian title"

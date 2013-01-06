@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory :content do
+    symbolic_name { generate :random_string }
     en true
     alias_en { generate :random_string }
     text_en { generate :random_text }

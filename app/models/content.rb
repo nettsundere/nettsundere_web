@@ -5,6 +5,9 @@ class Content < ActiveRecord::Base
 
   state_machine :state, :initial => :hidden do
     state :published do
+      
+      validates :symbolic_name, :presence => true, :uniqueness => true
+
       with_options :if => :en do |v|
         v.validates :alias_en, :presence => true, :uniqueness => true
         v.validates :title_en, :presence => true
