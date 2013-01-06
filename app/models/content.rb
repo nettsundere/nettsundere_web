@@ -2,10 +2,15 @@ class Content < ActiveRecord::Base
   include Localization::Model
 
   scope :published, lambda { where(:state => :published) }
+  scope :with_name, lambda { |name| where(:symbolic_name => name) }
+
+  def symbolic_name=(val)
+    write_attribute(:symbolic_name, val) unless predefined
+  end
 
   state_machine :state, :initial => :hidden do
     state :published do
-      
+
       validates :symbolic_name, :presence => true, :uniqueness => true
 
       with_options :if => :en do |v|

@@ -39,6 +39,7 @@ en:
         created: "Content reated"
         updated: "Content updated"
         deleted: "Content deleted"
+        cannot_be_deleted: "This content cannot be deleted"
       users:
         index:
           edit: "Edit"

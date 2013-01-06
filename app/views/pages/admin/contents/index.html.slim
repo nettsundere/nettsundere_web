@@ -14,6 +14,8 @@ table.table.table-striped
       td = content.title_ru
       td = content.title_en
       td = link_to(t('.edit'), edit_admin_content_path(content))
-      td = link_to(t('.delete'), admin_content_path(content),
-        :confirm => t('.are_you_sure'),
-        :method => :delete)
+      td 
+        - unless content.predefined 
+           = link_to(t('.delete'), admin_content_path(content),
+           :confirm => t('.are_you_sure'),
+           :method => :delete)

@@ -35,9 +35,15 @@ module Pages
 
       def destroy
         content = Content.find(params[:id])
-        content.delete
-        redirect_to admin_contents_path,
-          :notice => t('pages.admin.contents.deleted')
+        
+        if content.predefined
+          redirect_to admin_contents_path,
+            :notice => t('pages.admin.contents.cannot_be_deleted')
+        else
+          content.delete
+          redirect_to admin_contents_path,
+            :notice => t('pages.admin.contents.deleted')
+        end
       end
 
       private
