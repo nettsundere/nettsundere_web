@@ -1,0 +1,30 @@
+.content .repositories .repository {
+  float: left;
+  margin: 0em 0.5em 1em 0em;
+}
+
+.content .repositories .opened {
+  width: 35em;
+  border: 1px dashed;
+  padding: 1em;
+}
+
+.content .repositories .repository a.name {
+  text-decoration: none;
+  border-bottom: 1px dashed;
+  font-size: 1.5em;
+}
+
+.content .repositories .repository .description {
+  font-style: italic;
+}
+
+.repository .commit {
+  padding: 0em;
+  font: 0.9em/1.5em "Lucida Console", Monaco, monospace;
+}
+
+.repository .commits {
+  height: 30em;
+  overflow-y: scroll;
+}

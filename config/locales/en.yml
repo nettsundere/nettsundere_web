@@ -55,18 +55,24 @@ en:
           are_you_sure: "Are you sure?"
         created: "Repository created"
         updated: "Repository updated"
-        deleted: "Repository deleted" 
+        deleted: "Repository deleted"
+
+    welcome:
+      show:
+        title: "Greetings"
+        my_name_is: "My name is Vladimir Kiselev, i'am a skilled ruby, Ruby On Rails and javascript developer from St. Petersburg, Russia."
+        nice_to_meet_you: "Nice to meet you."
+        oss_commits: "You can review some of my committed changes for public opensource projects:"
+      repositories:
+        github_url: "Github url"
     page:
       menu:
-        root: "Summary"
-      footer_menu:
-        links: "Other resources:"
-        work: "Work"
-        social_networks: "Social"
-        github: "Github activity"
-        facebook: "Facebook profile"
-        moikrug: "Moikrug.ru profile"
-        linkedin: "Linkedin profile"
+        root: "Greetings"
+        resume: "Resume"
+        things: "Things"
+        contacts: "Contacts"
+        ru: "ru"
+        en: "en"
     sessions:
       form:
         sign_in: "Sign in"

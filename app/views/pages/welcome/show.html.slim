@@ -1,1 +1,7 @@
-h1 Hello
+- content_for :title do
+  = t('.title')
+p = t('.my_name_is')
+p = t('.nice_to_meet_you')
+p 
+  = t('.oss_commits')
+  = render "repositories", :repositories => @repositories

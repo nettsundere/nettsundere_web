@@ -2,6 +2,15 @@ module Pages
   module PageHelper
     include Localization::LocaleLogic
 
+    def content_path(symbolic_name)
+      content = Content.published.localized.with_name(symbolic_name).first
+      if content
+        File.join(root_path, content.alias)
+      else
+        nil
+      end
+    end
+
     def url_for_other_locale(other_locale)
       new_params = locale_hash_parameter(other_locale)
 

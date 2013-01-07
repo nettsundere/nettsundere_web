@@ -1,4 +1,6 @@
 class Commit < ActiveRecord::Base
+  scope :by_id, lambda { order("id ASC") }
+
   belongs_to :repository
 
   validates :repository, :presence => true

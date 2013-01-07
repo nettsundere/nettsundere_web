@@ -1,0 +1,14 @@
+.repositories[data-repo-api=api_repository_path(:id => ":repo_id")]
+  - repositories.each do |repository|
+    .repository[data-repo-id=repository.id data-repo-source=repository.source]
+      p
+        a.name[href="javascript:void(0)"] = (repository.name + ";")
+      .inner
+        - if repository.source == "github"
+          p.link 
+            = t('.github_url')
+            | : 
+            = link_to_github(repository)
+        p.description = repository.description
+        p.summary = repository.summary
+        p.commits

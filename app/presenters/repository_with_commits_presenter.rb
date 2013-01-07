@@ -10,7 +10,7 @@ class RepositoryWithCommitsPresenter < Hash
       :source => repository.source,
       :owner => repository.owner,
       :author => repository.author,
-      :commits => repository.commits.map(&:attributes)
+      :commits => repository.commits.by_id.map(&:attributes)
     )
   end
 end

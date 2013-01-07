@@ -1,2 +1,11 @@
-= link_to_unless_current(t('.root'), root_path)
-= link_to_unless_current(t('.things'), things_path)
+.menu
+  .left
+    ul
+      li = link_to_unless_current(t('.root'), root_path)
+      li = link_to_unless_current(t('.resume'), content_path(:resume))
+      li = link_to_unless_current(t('.things'), things_path)
+      li = link_to_unless_current(t('.contacts'), content_path(:contacts))
+  .right
+    .language_select
+      .flag = link_to_unless_current(t('.ru'), url_for_other_locale(:ru))
+      .flag = link_to_unless_current(t('.en'), url_for_other_locale(:en))
