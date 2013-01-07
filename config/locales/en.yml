@@ -13,7 +13,7 @@ en:
           contents: "Content pages"
           users: "Users"
           repositories: "Repositories"
-
+          banners: "Message banners"
           sigin_out: "Sign out"
       things:
         form:
@@ -56,7 +56,14 @@ en:
         created: "Repository created"
         updated: "Repository updated"
         deleted: "Repository deleted"
-
+      banners:
+        index:
+          edit: "Edit"
+          delete: "Delete"
+          are_you_sure: "Are you sure?"
+        created: "Banner created"
+        updated: "Banner updated"
+        deleted: "Banner deleted"
     welcome:
       show:
         title: "Greetings"
@@ -142,3 +149,10 @@ en:
         state: "State"
         state_event: "State"
         committed_changes: "Committed changes"
+      banner:
+        ru: "Russian version?"
+        en: "English version?"
+        state: "State"
+        state_event: "State"
+        message_ru: "Russian message"
+        message_en: "English message"

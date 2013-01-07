@@ -10,11 +10,19 @@ body {
   color: #111;
 }
 
-header {
-  padding: 2em 1em 2em 4em;
+a {
+  color: #5555ff;
+}
+
+a:visited {
+  color: #ff5555;
 }
 
 header .menu { 
+  padding: 2em 3em 2em 2em;
+}
+
+header .left, header .right {
   font: 2em/1em 'Open Sans', sans-serif;
 }
 
@@ -29,7 +37,7 @@ header .right {
 header .language_select .flag {
   font-size: 0.7em;
   float: left;
-  padding: 0em 0.5em;
+  padding: 0em 0em 0em 1em;
   height: 2em;
 }
 
@@ -48,7 +56,7 @@ header li {
 }
 
 .content {
-  padding: 3em 4em;
+  padding: 3em 2em;
 }
 
 .content p {

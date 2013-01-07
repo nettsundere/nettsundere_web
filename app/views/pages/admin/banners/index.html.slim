@@ -1,0 +1,17 @@
+table.table.table-striped
+  thead
+    tr
+      th #
+      th = Banner.human_attribute_name(:message_ru)
+      th = Banner.human_attribute_name(:message_en)
+      th
+      th
+  - @banners.each do |banner|
+    tr
+      td = banner.id
+      td = banner.message_ru
+      td = banner.message_en
+      td = link_to(t('.edit'), edit_admin_banner_path(banner))
+      td = link_to(t('.delete'), admin_banner_path(banner),
+        :confirm => t('.are_you_sure'),
+        :method => :delete)

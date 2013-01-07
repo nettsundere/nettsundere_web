@@ -21,6 +21,7 @@ NettsundereWeb::Application.routes.draw do
         root :to => "dashboard#show"
 
         with_options :except => [:show] do |map|
+          map.resources :banners
           map.resources :contents
           map.resources :things
           map.resources :users

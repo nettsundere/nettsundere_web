@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130106085119) do
+ActiveRecord::Schema.define(:version => 20130107120323) do
+
+  create_table "banners", :force => true do |t|
+    t.boolean  "ru"
+    t.boolean  "en"
+    t.text     "message_ru"
+    t.text     "message_en"
+    t.string   "state"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
