@@ -2,8 +2,15 @@ NettsundereWeb::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
 
   extend Localization::Routes
-  scope :module => :pages do
-    scope "(:locale)", :locale => explicit_locale_regexp do
+  
+  scope "(:locale)", :locale => explicit_locale_regexp do
+    namespace :api do
+      resources :repositories,
+        :only => [:show],
+        :defaults => { :format => 'json' }
+    end
+
+    scope :module => :pages do
       root :to => "welcome#show"
 
       resources :things, :only => [:index, :show]
