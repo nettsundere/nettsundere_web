@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Pages::ThingsController do
   before do
+    create_list(:published_thing, 3)
     @thing = create :published_thing
   end
 

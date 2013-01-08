@@ -1,7 +1,7 @@
 module Pages
   class ThingsController < PageController
     def index
-      @things = available_things
+      @things = available_things.desc_by_date
     end
 
     def show

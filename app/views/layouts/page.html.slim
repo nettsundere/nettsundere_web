@@ -3,7 +3,9 @@ html
   head
     meta http-equiv="Content-type" content="text/html; charset=UTF-8"
     
-    title = yield(:title)
+    title 
+      = yield(:title)
+      = t('.vladimir_kiselev_home')
     meta name="description" content=yield(:description)
     meta name="keywords" content=yield(:keywords)
 

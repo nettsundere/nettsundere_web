@@ -2,6 +2,7 @@ class Thing < ActiveRecord::Base
   include Localization::Model
 
   scope :published, lambda { where(:state => :published) }
+  scope :desc_by_date, lambda { order("date DESC") }
 
   state_machine :state, :initial => :hidden do
     state :published do

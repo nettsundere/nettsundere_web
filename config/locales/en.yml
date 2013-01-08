@@ -1,4 +1,7 @@
 en:
+  layouts:
+    page:
+      vladimir_kiselev_home: " | vladimir kiselev, ruby developer"
   pages:
     admin:
       access_denied: "Access denied"
@@ -72,6 +75,9 @@ en:
         oss_commits: "You can review some of my committed changes for public opensource projects:"
       repositories:
         github_url: "Github url"
+    things:
+      index:
+        projects_i_have_worked_on: "Projects i have worked on"
     page:
       menu:
         root: "Greetings"
