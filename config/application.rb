@@ -61,6 +61,12 @@ module NettsundereWeb
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    config.assets.precompile += Ckeditor.assets
+    config.assets.precompile += Ckeditor.assets + [
+      "page.js",
+      "admin_page.js",
+      "page.scss",
+      "admin_page.scss",
+      "login.scss"
+    ]
   end
 end
