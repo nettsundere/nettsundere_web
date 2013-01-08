@@ -19,7 +19,25 @@ a:visited {
 }
 
 header .menu { 
-  padding: 2em 3em 2em 2em;
+  padding: 2em 3em 1em 4em;
+}
+
+header .logo {
+  z-index: 2;
+  position: absolute;
+  left: 0em;
+  top: 1em;
+  width: 4em;
+}
+
+header .logo .inner {
+  margin:0px auto;
+  text-align:center;
+}
+
+header .logo img {
+  width: 15px;
+  height: 15px;
 }
 
 header .left, header .right {
@@ -50,13 +68,12 @@ header ul {
 
 header li {
   float: left;
-  padding: 0em;
-  width: 6em;
+  padding: 0em 1em 0em 0em;
   height: 2em;
 }
 
 .content {
-  padding: 3em 2em;
+  padding: 3em 4em;
 }
 
 .content p {
