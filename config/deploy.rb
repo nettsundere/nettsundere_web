@@ -56,3 +56,5 @@ namespace :deploy do
     capture "cat #{file}"
   end
 end
+
+after "deploy:restart", "deploy:cleanup"
