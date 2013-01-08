@@ -1,8 +1,6 @@
-require "rvm/capistrano"
 set :rvm_type, :system                  
 set :rvm_ruby_string, "ruby-1.9.3-head"
-set :rvm_bin_path, "/usr/local/bin"        
-
+set :rvm_bin_path, "/usr/local/rvm/bin"        
 set :application, "nettsundere_web"
 
 set :repository, "git@github.com:nettsundere/nettsundere_web.git"
@@ -10,7 +8,7 @@ set :scm, :git
 
 set :ssh_options, :forward_agent => true
 default_run_options[:pty] = true
-set :branch, "master"
+set :branch, "feature/new-website"
 set :scm_username, "nettsundere"
 
 set :user, "root"
@@ -25,9 +23,9 @@ role :db,  "rue-m.ru", :primary => true
 after 'deploy:update_code', 'config:symlink_shared'
 namespace :config do
   task :symlink_shared, :roles => :web do
-    run "ln -sf #{shared_path}/config/config.rb #{current_release}/config/config.rb"
-    run "ln -sf #{shared_path}/config/initializers/secret_token.rb #{current_release}/config/initializers/secret_token.rb"
-    run "ln -sf #{shared_path}/public/uploads #{current_release}/public/uploads"
+    run "ln -sf #{shared_path}/system/config/config.rb #{current_release}/config/config.rb"
+    run "ln -sf #{shared_path}/system/config/initializers/secret_token.rb #{current_release}/config/initializers/secret_token.rb"
+    run "ln -sf #{shared_path}/system/uploads #{current_release}/public/uploads"
   end
 end
 
@@ -53,7 +51,6 @@ namespace :deploy do
     start
   end
   
-  # Read pid value from pidfile.
   def pid_from(file)
     capture "cat #{file}"
   end
