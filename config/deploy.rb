@@ -15,6 +15,7 @@ set :user, "root"
 set :use_sudo, false
 
 set :deploy_to, "/var/www/nettsundere"
+set :keep_releases, 3
 
 role :web, "rue-m.ru"
 role :app, "rue-m.ru"
