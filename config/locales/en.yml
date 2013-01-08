@@ -52,6 +52,10 @@ en:
         updated: "User updated"
         deleted: "User deleted"
       repositories:
+        form:
+          main: "Main"
+          russian: "Russian"
+          english: "English"
         index:
           edit: "Edit"
           delete: "Delete"
@@ -60,6 +64,10 @@ en:
         updated: "Repository updated"
         deleted: "Repository deleted"
       banners:
+        form:
+          main: "Main"
+          russian: "Russian"
+          english: "English"
         index:
           edit: "Edit"
           delete: "Delete"
@@ -110,6 +118,7 @@ en:
       content: "a content"
       user: "a user"
       repository: "a repository"
+      banner: "a banner"
     attributes:
       thing:
         date: "Date"
