@@ -1,9 +1,13 @@
 .things li {
   list-style-type: none;
-  margin:0px;
-  padding:1em;
+  margin:0em;
+  padding:0.2em;
 }
 
 .things .name {
   display: inline;
+}
+
+.things .summary {
+  padding: 0.8em 0em 1em 1.2em;
 }
