@@ -22,6 +22,15 @@ role :web, "rue-m.ru"
 role :app, "rue-m.ru"
 role :db,  "rue-m.ru", :primary => true
 
+after 'deploy:update_code', 'config:symlink_shared'
+namespace :config do
+  task :symlink_shared, :roles => :web do
+    run "ln -sf #{shared_path}/config/config.rb #{current_release}/config/config.rb"
+    run "ln -sf #{shared_path}/config/initializers/secret_token.rb #{current_release}/config/initializers/secret_token.rb"
+    run "ln -sf #{shared_path}/public/uploads #{current_release}/public/uploads"
+  end
+end
+
 namespace :deploy do
   nginx = "/etc/init.d/nginx"
   unicorn = "/usr/local/rvm/gems/ruby-1.9.3-head/bin/unicorn"
@@ -29,32 +38,19 @@ namespace :deploy do
   rake = "/usr/local/rvm/gems/ruby-1.9.3-head/bin/rake"
   
   task :start, :roles => :web, :on_error => :continue do
-    commands = [
-      "cd #{current_path} && #{unicorn} -c config/unicorn.rb config.ru -E production -D",
-      "#{nginx} start"
-    ]
-    
-    run_all commands
+    run "cd #{current_path} && #{unicorn} -c config/unicorn.rb config.ru -E production -D"
+    run "#{nginx} start"
   end
   
   task :stop, :roles => :web, :on_error => :continue do
-    unicorn_pid = pid_from unicorn_pid_file  
- 
-    commands = [ 
-      "#{nginx} stop",
-      "kill -s QUIT #{unicorn_pid}"
-    ]
-    
-    run_all commands
+    unicorn_pid = pid_from unicorn_pid_file   
+    run "#{nginx} stop"
+    run "kill -s QUIT #{unicorn_pid}"
   end
   
   task :restart, :roles => :web do
     stop
     start
-  end
-  
-  def run_all(commands)
-    commands.each {|command| run command}
   end
   
   # Read pid value from pidfile.
