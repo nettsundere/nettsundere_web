@@ -69,6 +69,7 @@ en:
         deleted: "Banner deleted"
     welcome:
       show:
+        i_am: "I am"
         title: "Greetings"
         my_name_is: "My name is Vladimir Kiselev, i'am a skilled ruby, Ruby On Rails and javascript developer from St. Petersburg, Russia."
         nice_to_meet_you: "Nice to meet you."
