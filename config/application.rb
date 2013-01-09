@@ -64,9 +64,9 @@ module NettsundereWeb
     config.assets.precompile += Ckeditor.assets + [
       "page.js",
       "admin_page.js",
-      "page.scss",
-      "admin_page.scss",
-      "login.scss"
+      "page.css",
+      "admin_page.css",
+      "login.css"
     ]
   end
 end
