@@ -8,7 +8,7 @@ set :scm, :git
 
 set :ssh_options, :forward_agent => true
 default_run_options[:pty] = true
-set :branch, "feature/new-website"
+set :branch, "master"
 set :scm_username, "nettsundere"
 
 set :user, "root"
