@@ -30,6 +30,8 @@ namespace :config do
   end
 end
 
+load "deploy/assets"
+
 namespace :deploy do
   nginx = "/etc/init.d/nginx"
   unicorn = "/usr/local/rvm/gems/ruby-1.9.3-head/bin/unicorn"
