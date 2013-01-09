@@ -5,7 +5,8 @@ module Pages
     end
 
     def show
-      @thing = available_things.find(params[:id])
+      localized_name = Thing.localized_name(:name)
+      @thing = available_things.where(localized_name => params[:id]).first!
     end
 
     private
