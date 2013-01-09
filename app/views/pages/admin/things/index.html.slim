@@ -1,0 +1,17 @@
+table.table.table-striped
+  thead
+    tr
+      th #
+      th = Thing.human_attribute_name(:name_ru)
+      th = Thing.human_attribute_name(:name_en)
+      th
+      th
+  - @things.each do |thing|
+    tr
+      td = thing.id
+      td = thing.name_ru
+      td = thing.name_en
+      td = link_to(t('.edit'), edit_admin_thing_path(thing))
+      td = link_to(t('.delete'), admin_thing_path(thing),
+        :confirm => t('.are_you_sure'),
+        :method => :delete)

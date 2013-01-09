@@ -1,0 +1,174 @@
+ru:
+  layouts:
+    page:
+      vladimir_kiselev_home: " | владимир киселев, ruby программист"
+  pages:
+    admin:
+      access_denied: "Доступ запрещен"
+      admin_page:
+        menu:
+          nettsundere: "NRE"
+
+          index: "Список"
+          new: "Создать"
+
+          things: "Проекты"
+          contents: "Содержимое"
+          users: "Пользователи"
+          repositories: "Репозитории"
+          banners: "Баннеры"
+          sign_out: "Выйти"
+      things:
+        form:
+          main: "Главное"
+          russian: "Русское"
+          english: "Английское"
+        index:
+          edit: "Редактировать"
+          delete: "Удалить"
+          are_you_sure: "Вы уверены?"
+        created: "Проект создан"
+        updated: "Проект изменен"
+        deleted: "Проект удален"
+      contents:
+        form:
+          main: "Главное"
+          russian: "Русское"
+          english: "Английское"
+        index:
+          edit: "Редактировать"
+          delete: "Удалить"
+          are_you_sure: "Вы уверены?"
+        created: "Содержимое создано"
+        updated: "Содержимое изменено"
+        deleted: "Содержимое удалено"
+        cannot_be_deleted: "Данное содержимое не может быть удалено"
+      users:
+        index:
+          edit: "Редактировать"
+          delete: "Удалить"
+          are_you_sure: "Вы уверены?"
+        created: "Пользователь создан"
+        updated: "Пользователь изменен"
+        deleted: "Пользователь удален"
+      repositories:
+        form:
+          main: "Главное"
+          russian: "Русское"
+          english: "Английское"
+        index:
+          edit: "Редактировать"
+          delete: "Удалить"
+          are_you_sure: "Вы уверены?"
+        created: "Репозиторий создан"
+        updated: "Репозиторий изменен"
+        deleted: "Репозиторий удален"
+      banners:
+        form:
+          main: "Главное"
+          russian: "Русское"
+          english: "Английское"
+        index:
+          edit: "Редактировать"
+          delete: "Удалить"
+          are_you_sure: "Вы уверены?"
+        created: "Баннер создан"
+        updated: "Баннер изменен"
+        deleted: "Баннер удален"
+    welcome:
+      show:
+        i_am: "Я есть"
+        title: "Добрый день"
+        my_name_is: "Меня зовут Владимир Киселев, я &mdash; ruby, Ruby On Rails и javascript программист из Санкт-Петербурга."
+        nice_to_meet_you: "Приятно познакомиться."
+        oss_commits: "Ниже представлены мои коммиты в некоторые проекты с открытым исходным кодом:"
+      repositories:
+        github_url: "На гитхабе"
+    things:
+      index:
+        projects_i_have_worked_on: "Проекты, над которыми я работал"
+    page:
+      menu:
+        root: "Добрый день"
+        resume: "Резюме"
+        things: "Проекты"
+        contacts: "Контакты"
+        ru: "ru"
+        en: "en"
+    sessions:
+      form:
+        sign_in: "Войти"
+      new:
+        authorization: "Авторизация"
+      login_failed: "Вход не выполнен"
+  activerecord:
+    state_machines:
+      states:
+        published: "Опубликовано"
+        hidden: "Скрыто"
+        enabled: "Активирован"
+        disabled: "Деактивирован"
+      events:
+        publish: "Опубликовать"
+        hide: "Скрыть"
+        enable: "Активировать"
+        disable: "Деактивировать"
+    models:
+      thing: "проект"
+      content: "содержимое"
+      user: "пользователь"
+      repository: "репозиторий"
+      banner: "баннер"
+    attributes:
+      thing:
+        date: "Дата"
+        ru: "Русская версия?"
+        en: "Английская версия?"
+        name_ru: "Русское название"
+        name_en: "Английское название"
+        summary_ru: "Кратко по-русски"
+        summary_en: "Кратко по-английски"
+        text_ru: "Русский текст"
+        text_en: "Английский текст"
+        state: "Состояние"
+        state_event: "Состояние"
+      content:
+        ru: "Русская версия?"
+        en: "Английская версия?"
+        symbolic_name: "Символическое имя"
+        alias_ru: "Русский синоним url"
+        alias_en: "Английский синоним url"
+        title_ru: "Русский заголовок"
+        title_en: "Английский заголовок"
+        text_ru: "Русский текст"
+        text_en: "Английский текст"
+        state: "Состояние"
+        state_event: "Состояние"
+      user:
+        login: "Логин"
+        password: "Пароль"
+        password_digest: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        state: "Состояние"
+        state_event: "Состояние"
+      repository:
+        ru: "Русская версия?"
+        en: "Английская версия?"
+        source: "GIT хранилище"
+        name: "Название"
+        owner: "Владелец"
+        author: "Автор коммитов"
+        description_ru: "Русское описание"
+        description_en: "Английское описание"
+        summary_ru: "Кратко по-русски"
+        summary_en: "Кратко по-английски"
+        state: "Состояние"
+        state_event: "Состояние"
+        committed_changes: "Количество изменений"
+      banner:
+        ru: "Русская версия?"
+        en: "Английская версия?"
+        state: "Состояние"
+        state_event: "Состояние"
+        message_ru: "Русское сообщение"
+        message_en: "Английское сообщение"

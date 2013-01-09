@@ -1,0 +1,7 @@
+- content_for :title do
+  = t('.authorization')
+.auth
+  .notice
+    = flash[:notice]
+  h1 = t('.authorization')
+  = render "form", :user => @user, :action => session_path

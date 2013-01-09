@@ -1,0 +1,8 @@
+GITHUB_ACCOUNT = {
+  :username => "user",
+  :password => "password"
+}
+
+SALT = {
+  :files => "random"
+}
