@@ -15,5 +15,5 @@
 /tmp
 coverage
 /config/config.rb
-/config/secret_token.rb
+/config/initializers/secret_token.rb
 /public/uploads
