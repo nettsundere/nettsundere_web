@@ -1,0 +1,174 @@
+en:
+  layouts:
+    page:
+      vladimir_kiselev_home: " | vladimir kiselev, ruby developer"
+  pages:
+    admin:
+      access_denied: "Access denied"
+      admin_page:
+        menu:
+          nettsundere: "NRE"
+
+          index: "Index"
+          new: "New"
+
+          things: "Things"
+          contents: "Content pages"
+          users: "Users"
+          repositories: "Repositories"
+          banners: "Message banners"
+          sigin_out: "Sign out"
+      things:
+        form:
+          main: "Main"
+          russian: "Russian"
+          english: "English"
+        index:
+          edit: "Edit"
+          delete: "Delete"
+          are_you_sure: "Are you sure?"
+        created: "Thing created"
+        updated: "Thing updated"
+        deleted: "Thing deleted"
+      contents:
+        form:
+          main: "Main"
+          russian: "Russian"
+          english: "English"
+        index:
+          edit: "Edit"
+          delete: "Delete"
+          are_you_sure: "Are you sure?"
+        created: "Content reated"
+        updated: "Content updated"
+        deleted: "Content deleted"
+        cannot_be_deleted: "This content cannot be deleted"
+      users:
+        index:
+          edit: "Edit"
+          delete: "Delete"
+          are_you_sure: "Are you sure?"
+        created: "User created"
+        updated: "User updated"
+        deleted: "User deleted"
+      repositories:
+        form:
+          main: "Main"
+          russian: "Russian"
+          english: "English"
+        index:
+          edit: "Edit"
+          delete: "Delete"
+          are_you_sure: "Are you sure?"
+        created: "Repository created"
+        updated: "Repository updated"
+        deleted: "Repository deleted"
+      banners:
+        form:
+          main: "Main"
+          russian: "Russian"
+          english: "English"
+        index:
+          edit: "Edit"
+          delete: "Delete"
+          are_you_sure: "Are you sure?"
+        created: "Banner created"
+        updated: "Banner updated"
+        deleted: "Banner deleted"
+    welcome:
+      show:
+        i_am: "I am"
+        title: "Greetings"
+        my_name_is: "My name is Vladimir Kiselev, i'am a skilled ruby, Ruby On Rails and javascript developer from St. Petersburg, Russia."
+        nice_to_meet_you: "Nice to meet you."
+        oss_commits: "You can review some of my committed changes for public opensource projects:"
+      repositories:
+        github_url: "Github url"
+    things:
+      index:
+        projects_i_have_worked_on: "Projects i have worked on"
+    page:
+      menu:
+        root: "Greetings"
+        resume: "Resume"
+        things: "Things"
+        contacts: "Contacts"
+        ru: "ru"
+        en: "en"
+    sessions:
+      form:
+        sign_in: "Sign in"
+      new:
+        authorization: "Authorization"
+      login_failed: "Login failed"
+  activerecord:
+    state_machines:
+      states:
+        published: "Published"
+        hidden: "Hidden"
+        enabled: "Enabled"
+        disabled: "Disabled"
+      events:
+        publish: "Publish"
+        hide: "Hide"
+        enable: "Enable"
+        disable: "Disable"
+    models:
+      thing: "a thing"
+      content: "a content"
+      user: "a user"
+      repository: "a repository"
+      banner: "a banner"
+    attributes:
+      thing:
+        date: "Date"
+        ru: "Russian version?"
+        en: "English version?"
+        name_ru: "Russian name"
+        name_en: "English name"
+        summary_ru: "Russian summary"
+        summary_en: "English summary"
+        text_ru: "Russian text"
+        text_en: "English text"
+        state: "State"
+        state_event: "State"
+      content:
+        ru: "Russian version?"
+        en: "English version?"
+        symbolic_name: "Symbolic name"
+        alias_ru: "Russian url alias"
+        alias_en: "English url alias"
+        title_ru: "Russian title"
+        title_en: "English title"
+        text_ru: "Russian text"
+        text_en: "English text"
+        state: "State"
+        state_event: "State"
+      user:
+        login: "Login"
+        password: "Password"
+        password_digest: "Password"
+        password_confirmation: "Password confirmation"
+        state: "State"
+        state_event: "State"
+      repository:
+        ru: "Russian version?"
+        en: "English version?"
+        source: "GIT Source"
+        name: "Name"
+        owner: "Owner"
+        author: "Commits author"
+        description_ru: "Russian description"
+        description_en: "English description"
+        summary_ru: "Russian summary"
+        summary_en: "English summary"
+        state: "State"
+        state_event: "State"
+        committed_changes: "Committed changes"
+      banner:
+        ru: "Russian version?"
+        en: "English version?"
+        state: "State"
+        state_event: "State"
+        message_ru: "Russian message"
+        message_en: "English message"

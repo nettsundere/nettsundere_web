@@ -1,0 +1,18 @@
+table.table.table-striped
+  thead
+    tr
+      th #
+      th = Repository.human_attribute_name(:name)
+      th = Repository.human_attribute_name(:source)
+      th = Repository.human_attribute_name(:committed_changes)
+      th
+  - @repositories.each do |repository|
+    tr
+      td = repository.id
+      td = repository.name
+      td = repository.source
+      td = repository.committed_changes
+      td = link_to(t('.edit'), edit_admin_repository_path(repository))
+      td = link_to(t('.delete'), admin_repository_path(repository),
+        :confirm => t('.are_you_sure'),
+        :method => :delete)

@@ -1,0 +1,36 @@
+body {
+  margin: 0px;
+  padding: 0px;
+
+  font: 1.3em/1.8em 'Open Sans', sans-serif;
+  color: #111;
+}
+
+.auth {
+  margin: 5em auto;
+  width: 22em;
+  background: #eee;
+  padding: 1em;
+  border-radius: 1px;
+}
+
+.auth h1 {
+  text-align: left;
+}
+
+.auth form {
+  display: block;
+  text-align: left;
+}
+
+.auth form input {
+  display:block;
+  margin-top: 1em;
+  width: 15em;
+  font: 1.3em/1.8em 'Open Sans', sans-serif;
+  color: #111;
+}
+
+.auth .submit {
+  width: auto;
+}

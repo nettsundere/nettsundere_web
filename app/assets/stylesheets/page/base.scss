@@ -1,0 +1,111 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  background: #fff;
+
+  font: 0.9em/1.5em 'Open Sans', sans-serif;
+  color: #111;
+}
+
+a {
+  color: #5555ff;
+}
+
+a:visited {
+  color: #ff5555;
+}
+
+header .menu { 
+  padding: 2em 3em 1em 4em;
+}
+
+header .logo {
+  z-index: 2;
+  position: absolute;
+  left: 0em;
+  top: 1em;
+  width: 4em;
+}
+
+header .logo .inner {
+  margin:0px auto;
+  text-align:center;
+}
+
+header .logo img {
+  width: 15px;
+  height: 15px;
+}
+
+header .left, header .right {
+  font: 2em/1em 'Open Sans', sans-serif;
+}
+
+header .left {
+  float: left;
+}
+
+header .right {
+  float: right;
+}
+
+header .language_select .flag {
+  font-size: 0.7em;
+  float: left;
+  padding: 0em 0em 0em 1em;
+  height: 2em;
+}
+
+header ul {
+  float: left;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+header li {
+  float: left;
+  padding: 0em 1em 0em 0em;
+  height: 2em;
+}
+
+.content {
+  padding: 3em 4em;
+}
+
+.content p {
+  margin: 0em 0em 1em 0em;
+}
+
+a {
+  color: #445599;
+}
+
+a:hover {
+  color: #334499;
+}
+
+a:visited {
+  color: #994455;
+}
+
+$footer_height: 1em;
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0px auto (-$footer_height);
+}
+
+.push, footer {
+  height: $footer_height;
+  clear: both;
+}
+
+footer {
+  background: #000;
+}

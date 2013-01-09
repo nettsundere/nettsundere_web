@@ -1,0 +1,25 @@
+= simple_form_for(content, :url => action, :html => {:class => 'form-horizontal' }) do |f|
+  = render "form_errors", :errors => content.errors
+  .taggable
+    ul.nav.nav-tabs
+      li.active
+        a href="#main" data-toggle="tab" = t('.main')
+      li
+        a href="#ru" data-toggle="tab" = t('.russian')
+      li
+        a href="#en" data-toggle="tab" = t('.english')
+    .tab-content
+      .tab-pane#main.active
+        = f.input :state_event, :as => :state_event_select
+        = f.input :symbolic_name
+      .tab-pane#ru
+        = f.input :ru
+        = f.input :alias_ru
+        = f.input :title_ru
+        = f.input :text_ru, :as => :ckeditor, :input_html => { :height => 400 }
+      .tab-pane#en
+        = f.input :en
+        = f.input :alias_en
+        = f.input :title_en
+        = f.input :text_en, :as => :ckeditor, :input_html => { :height => 400 }
+    = f.button :submit, :class => "btn btn-primary"
