@@ -86,7 +86,7 @@ ru:
         github_url: "На гитхабе"
     things:
       index:
-        projects_i_have_worked_on: "Проекты над которыми я работал"
+        projects_i_have_worked_on: "Проекты, над которыми я работал"
     page:
       menu:
         root: "Добрый день"
