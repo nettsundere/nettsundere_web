@@ -9,5 +9,5 @@ h1 = t('.projects_i_have_worked_on')
       - @things.each do |thing|
         li.thing
           | &mdash; 
-          .name = link_to(thing.name, thing_path(thing))
+          .name = link_to(thing.name, thing_path(thing.name))
           .summary == thing.summary

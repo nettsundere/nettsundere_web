@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130107120323) do
+ActiveRecord::Schema.define(:version => 20130109023720) do
 
   create_table "banners", :force => true do |t|
     t.boolean  "ru"
@@ -100,6 +100,9 @@ ActiveRecord::Schema.define(:version => 20130107120323) do
     t.datetime "updated_at", :null => false
     t.string   "state"
   end
+
+  add_index "things", ["name_en"], :name => "index_things_on_name_en"
+  add_index "things", ["name_ru"], :name => "index_things_on_name_ru"
 
   create_table "users", :force => true do |t|
     t.string "login"
