@@ -19,12 +19,12 @@
   font-style: italic;
 }
 
-.repository .commit {
+.content .repositories .repository .commit {
   padding: 0em;
   font: 0.9em/1.5em "Lucida Console", Monaco, monospace;
 }
 
-.repository .commits {
+.content .repositories .repository .commits {
   height: 30em;
   overflow-y: scroll;
 }
