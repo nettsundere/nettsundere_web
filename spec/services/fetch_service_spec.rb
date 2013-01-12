@@ -11,12 +11,14 @@ describe "Fetch service" do
 
     Fetchers::GithubCommits.any_instance.stub(:api_get_commits).and_return(
       [
-        {
-          'sha' => '1'
-        },
-        {
-          'sha' => '2'
-        }
+        [
+          {
+            'sha' => '1'
+          },
+          {
+            'sha' => '2'
+          }
+        ]
       ]
     )
 

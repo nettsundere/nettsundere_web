@@ -4,7 +4,9 @@ module Fetchers
   class GithubCommits
     include Enumerable
     include HTTParty
-    base_uri "https://api.github.com"
+    API_ROOT = "https://api.github.com"
+    COMMITS_PER_PAGE = 100
+    base_uri API_ROOT
     format :json
 
     def initialize(repository, username, password)
@@ -24,7 +26,7 @@ module Fetchers
     private
       def find_commit(sha)
         commit = api_get_commit(sha)
-        
+
         {
           :message => commit["commit"]["message"],
           :time => commit["commit"]["committer"]["date"],
@@ -35,13 +37,39 @@ module Fetchers
       end
 
       def find_commits_ids
-        api_get_commits.map { |c| c["sha"] }
+        scmids = api_get_commits.map do |commits| 
+          commits.map { |c| c["sha"] }
+        end
+        scmids.flatten
       end
 
       def api_get_commits
-        self.class.get(author_commits_url, {
-          :basic_auth => @auth
-        })
+        commits = []
+        url = author_commits_url
+        loop do
+          url_with_per_page = "#{url}&per_page=#{COMMITS_PER_PAGE}"
+          page_commits = self.class.get(
+            url_with_per_page,
+            { :basic_auth => @auth }
+          )
+
+          commits << page_commits
+
+          link = parse_link(page_commits.headers["link"])
+          if link && (link != url)
+            url = link
+          else
+            return commits
+          end
+        end
+      end
+
+      def parse_link(link_header)
+        if link_header =~ author_commits_regexp
+          author_commits_url + $1
+        else
+          nil
+        end
       end
 
       def api_get_commit(sha)
@@ -52,6 +80,12 @@ module Fetchers
 
       def author_commits_url
         commits_url + "?author=#{@repository.author}"
+      end
+
+      def author_commits_regexp
+        Regexp.new(
+          "^<#{API_ROOT}#{author_commits_url.gsub('?', '\?')}(.+)>; rel=\"next\","
+        )
       end
 
       def commit_url(commit_sha)
