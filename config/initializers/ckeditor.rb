@@ -21,12 +21,18 @@ module CkeditorControllerPatch
   include Authorization::Controller
 
   def ckeditor_before_create_asset(asset)
-    head :bad_request unless signed_in?
+    ck_auth
   end
 
   def ckeditor_authenticate
-    head :bad_request unless signed_in?
+    ck_auth
   end
+
+  private
+    def ck_auth
+      head :bad_request unless signed_in?
+      signed_in?
+    end
 end
 
 Ckeditor::ApplicationController.send(:include, CkeditorControllerPatch)
