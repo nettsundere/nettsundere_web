@@ -10,10 +10,10 @@
       var github_commit_path = "https://github.com/:owner/:name/commit/:scmid"
       var this_commit_url = github_commit_path.replace(/:owner/, obj.repository.owner).replace(/:name/, obj.repository.name).replace(/:scmid/, obj.commit.scmid)
     %>
-    <a href="<%= this_commit_url %>">
-      <%= message_with_changes %>
+    <a href="<%- this_commit_url %>">
+      <%- message_with_changes %>
     </a>
   <% } else { %>
-    <%= message_with_changes %>
+    <%- message_with_changes %>
   <% } %>
 </p>
