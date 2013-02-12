@@ -26,6 +26,7 @@ namespace :config do
   task :symlink_shared, :roles => :web do
     run "ln -sf #{shared_path}/system/config/config.rb #{current_release}/config/config.rb"
     run "ln -sf #{shared_path}/system/config/initializers/secret_token.rb #{current_release}/config/initializers/secret_token.rb"
+    run "rm -rf #{current_release}/public/uploads"
     run "ln -sf #{shared_path}/system/uploads #{current_release}/public/uploads"
   end
 end
