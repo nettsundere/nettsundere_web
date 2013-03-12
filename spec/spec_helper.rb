@@ -50,6 +50,15 @@ end
 
 
 include Authorization::Controller
+
+module Authorization::Controller
+  def reset_session # stub
+    session.each_key do |k|
+      session[k] = nil
+    end
+  end
+end
+
 def sign_in!
   some_user = create :enabled_user
   sign_in(some_user)
