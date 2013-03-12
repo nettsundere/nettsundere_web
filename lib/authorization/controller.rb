@@ -5,11 +5,12 @@ module Authorization
     end
 
     def sign_out!
-      session[:user_id] = nil
       @current_user = nil
+      reset_session
     end
 
     def sign_in(user)
+      reset_session
       session[:user_id] = user.id
     end
 
