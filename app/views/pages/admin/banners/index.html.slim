@@ -12,6 +12,6 @@ table.table.table-striped
       td = banner.message_ru
       td = banner.message_en
       td = link_to(t('.edit'), edit_admin_banner_path(banner))
-      td = link_to(t('.delete'), admin_banner_path(banner),
-        :confirm => t('.are_you_sure'),
-        :method => :delete)
+      td = link_to(t('.delete'), admin_banner_path(banner), \
+                   :confirm => t('.are_you_sure'), \
+                   :method => :delete)

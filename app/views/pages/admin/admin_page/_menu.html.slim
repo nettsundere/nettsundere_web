@@ -40,5 +40,4 @@
             li = link_to(t('.index'), admin_users_path)
             li = link_to(t('.new'), new_admin_user_path)
       form.navbar-form.pull-right
-        = link_to(t('.sign_out'), session_path,
-          :class => "btn btn-inverse", :method => :delete)
+        = link_to(t('.sign_out'), session_path, :class => "btn btn-inverse", :method => :delete)

@@ -12,6 +12,6 @@ table.table.table-striped
       td = thing.name_ru
       td = thing.name_en
       td = link_to(t('.edit'), edit_admin_thing_path(thing))
-      td = link_to(t('.delete'), admin_thing_path(thing),
-        :confirm => t('.are_you_sure'),
-        :method => :delete)
+      td = link_to(t('.delete'), admin_thing_path(thing), \
+                   :confirm => t('.are_you_sure'), \
+                   :method => :delete)
