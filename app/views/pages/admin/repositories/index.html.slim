@@ -13,6 +13,6 @@ table.table.table-striped
       td = repository.source
       td = repository.committed_changes
       td = link_to(t('.edit'), edit_admin_repository_path(repository))
-      td = link_to(t('.delete'), admin_repository_path(repository),
-        :confirm => t('.are_you_sure'),
-        :method => :delete)
+      td = link_to(t('.delete'), admin_repository_path(repository), \
+                   :confirm => t('.are_you_sure'), \
+                   :method => :delete)

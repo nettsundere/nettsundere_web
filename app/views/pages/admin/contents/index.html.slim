@@ -16,6 +16,6 @@ table.table.table-striped
       td = link_to(t('.edit'), edit_admin_content_path(content))
       td 
         - unless content.predefined 
-           = link_to(t('.delete'), admin_content_path(content),
-           :confirm => t('.are_you_sure'),
-           :method => :delete)
+           = link_to(t('.delete'), admin_content_path(content), \
+                     :confirm => t('.are_you_sure'), \
+                     :method => :delete)
