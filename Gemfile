@@ -29,7 +29,7 @@ group :test, :development do
   gem "rspec-rails", "~> 2.0"
 end
 
-gem 'slim'
+gem 'slim', ">= 1.3"
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
