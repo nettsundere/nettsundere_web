@@ -116,7 +116,11 @@ ru:
     models:
       thing: "проект"
       content: "содержимое"
-      user: "пользователь"
+      user:
+        few: "пользователей"
+        one: "пользователя"
+        many: "пользователей"
+        other: "пользователя"
       repository: "репозиторий"
       banner: "баннер"
     attributes:
