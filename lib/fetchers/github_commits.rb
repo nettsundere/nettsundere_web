@@ -5,7 +5,13 @@ module Fetchers
     include Enumerable
     include HTTParty
     API_ROOT = "https://api.github.com"
+    
+    HEADERS = {
+      "User-Agent" => "vladimir-kiselev.ru commit fetcher"
+    }
+    
     COMMITS_PER_PAGE = 100
+    
     base_uri API_ROOT
     format :json
 
@@ -50,7 +56,10 @@ module Fetchers
           url_with_per_page = "#{url}&per_page=#{COMMITS_PER_PAGE}"
           page_commits = self.class.get(
             url_with_per_page,
-            { :basic_auth => @auth }
+            { 
+              :basic_auth => @auth,
+              :headers => HEADERS
+            }
           )
 
           commits << page_commits
@@ -73,9 +82,12 @@ module Fetchers
       end
 
       def api_get_commit(sha)
-        self.class.get(commit_url(sha), {
-          :basic_auth => @auth
-        })
+        self.class.get(commit_url(sha),
+          { 
+            :basic_auth => @auth,
+            :headers => HEADERS
+          }
+        )
       end
 
       def author_commits_url
