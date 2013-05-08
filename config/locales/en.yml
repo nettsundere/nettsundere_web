@@ -17,7 +17,7 @@ en:
           users: "Users"
           repositories: "Repositories"
           banners: "Message banners"
-          sigin_out: "Sign out"
+          sign_out: "Sign out"
       things:
         form:
           main: "Main"
