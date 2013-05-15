@@ -1,5 +1,5 @@
 set :rvm_type, :system                  
-set :rvm_ruby_string, "ruby-1.9.3-head"
+set :rvm_ruby_string, "ruby-2.0.0-p195"
 set :rvm_bin_path, "/usr/local/rvm/bin"        
 set :application, "nettsundere_web"
 
