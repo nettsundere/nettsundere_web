@@ -39,7 +39,7 @@ namespace :deploy do
   unicorn_pid_file = "/var/run/nettsundere_unicorn.pid"
   
   task :start, :roles => :web, :on_error => :continue do
-    run "cd #{current_path} && unicorn -c config/unicorn.rb config.ru -E production -D"
+    run "cd #{current_path} && bundle exec unicorn -c config/unicorn.rb config.ru -E production -D"
     run "#{nginx} start"
   end
   
