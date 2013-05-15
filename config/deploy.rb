@@ -1,6 +1,6 @@
 set :rvm_type, :system                  
 set :rvm_ruby_string, "ruby-2.0.0-p195"
-set :rvm_bin_path, "/usr/local/rvm/bin"        
+set :rvm_bin_path, "/usr/local/rvm"        
 set :application, "nettsundere_web"
 
 set :repository, "git@github.com:nettsundere/nettsundere_web.git"
