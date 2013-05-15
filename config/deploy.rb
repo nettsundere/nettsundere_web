@@ -35,12 +35,10 @@ load "deploy/assets"
 
 namespace :deploy do
   nginx = "/etc/init.d/nginx"
-  unicorn = "/usr/local/rvm/gems/ruby-1.9.3-head/bin/unicorn"
   unicorn_pid_file = "/var/run/nettsundere_unicorn.pid"
-  rake = "/usr/local/rvm/gems/ruby-1.9.3-head/bin/rake"
   
   task :start, :roles => :web, :on_error => :continue do
-    run "cd #{current_path} && #{unicorn} -c config/unicorn.rb config.ru -E production -D"
+    run "cd #{current_path} && unicorn -c config/unicorn.rb config.ru -E production -D"
     run "#{nginx} start"
   end
   
