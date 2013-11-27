@@ -1,7 +1,7 @@
-set :rvm_type, :system                  
-set :rvm_ruby_string, "ruby-2.0.0-p195"
-set :rvm_bin_path, "/usr/local/rvm/bin"    
-set :rvm_path, "/usr/local/rvm"    
+set :rvm_type, :system
+set :rvm_ruby_string, "ruby-2.0.0-p353"
+set :rvm_bin_path, "/usr/local/rvm/bin"
+set :rvm_path, "/usr/local/rvm"
 set :application, "nettsundere_web"
 
 set :repository, "git@github.com:nettsundere/nettsundere_web.git"
@@ -37,23 +37,23 @@ load "deploy/assets"
 namespace :deploy do
   nginx = "/etc/init.d/nginx"
   unicorn_pid_file = "/var/run/nettsundere_unicorn.pid"
-  
+
   task :start, :roles => :web, :on_error => :continue do
     run "cd #{current_path} && bundle exec unicorn -c config/unicorn.rb config.ru -E production -D"
     run "#{nginx} start"
   end
-  
+
   task :stop, :roles => :web, :on_error => :continue do
-    unicorn_pid = pid_from unicorn_pid_file   
+    unicorn_pid = pid_from unicorn_pid_file
     run "#{nginx} stop"
     run "kill -s QUIT #{unicorn_pid}"
   end
-  
+
   task :restart, :roles => :web do
     stop
     start
   end
-  
+
   def pid_from(file)
     capture "cat #{file}"
   end
