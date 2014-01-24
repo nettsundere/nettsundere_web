@@ -79,7 +79,7 @@ en:
       show:
         i_am: "I am"
         title: "Greetings"
-        my_name_is: "My name is Vladimir Kiselev, i'am a skilled ruby, Ruby On Rails and JavaScript developer from St. Petersburg, Russia."
+        my_name_is: "My name is Vladimir Kiselev, i'am a Ruby, Ruby On Rails and JavaScript developer from St. Petersburg, Russia."
         nice_to_meet_you: "Nice to meet you."
         oss_commits: "You can review some of my committed changes for public opensource projects:"
       repositories:
