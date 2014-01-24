@@ -79,7 +79,7 @@ ru:
       show:
         i_am: "Я есть"
         title: "Добрый день"
-        my_name_is: "Меня зовут Владимир Киселев, я &mdash; ruby, Ruby On Rails и JavaScript программист из Санкт-Петербурга."
+        my_name_is: "Меня зовут Владимир Киселев, я &mdash; Ruby, Ruby On Rails и JavaScript программист из Санкт-Петербурга."
         nice_to_meet_you: "Приятно познакомиться."
         oss_commits: "Ниже представлены мои коммиты в некоторые проекты с открытым исходным кодом:"
       repositories:
