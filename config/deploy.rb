@@ -18,9 +18,9 @@ set :use_sudo, false
 set :deploy_to, "/var/www/nettsundere"
 set :keep_releases, 3
 
-role :web, "rue-m.ru"
-role :app, "rue-m.ru"
-role :db,  "rue-m.ru", :primary => true
+role :web, "vladimir-kiselev.ru"
+role :app, "vladimir-kiselev.ru"
+role :db,  "vladimir-kiselev.ru", :primary => true
 
 after 'deploy:update_code', 'config:symlink_shared'
 namespace :config do
